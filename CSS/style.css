@@ -522,156 +522,195 @@ html, body{
 
 @media (min-width: 360px) and (max-width: 500px){
     /*Navbar*/
-    .logo{
-        display: none;
-    }
     .navbar{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem 0;
-    }
-    .navbar-links li a{
-        padding: 1rem 0;
-        text-align: center;
-    }
-    .toggle-button{
-        display: flex;
-        display: flex;
-    position: absolute;
-    right: 8.5rem;
-    top: 0.3rem;
+        padding: 0;
     }
     .brand-title{
         margin-right: 0;
     }
-    /*Home*/
-    .home-header img{
-        width: 100%;
+    .logo{
+        padding: 0 1rem ;
+        width: 80%;
     }
-    .home-header h1{
-        font-size: 1rem;
-        bottom: 0;
+    .drp-btn{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+        box-shadow: none;
+        transform: none;
+    }
+    .drp-btn i{
+        display: none;
+    }
+    .btn{
+       
+        background-color: var(--color-primary) !important;
+    }
+    .booking-txt{
         color: var(--color-black);
-        margin-left: 0;
+    }
+    
+    /*Home*/
+    .home-header h1{
+        bottom: 6rem;
+        margin-left: 0rem;
+        font-size: 2rem;
     }
     .home-header p{
-        color: var(--color-black);
-        font-size: 1rem;
-        bottom: 0;
-        margin-left: 0;
+        bottom: 6.5rem;
+        margin-left: 0rem;
+        font-size: .7rem;
+        line-height: 1rem;
     }
     .next-icon{
-        bottom: 0;
-        margin-left: 0;
+        bottom: 11rem;
+        margin-left: 15rem;
+    }
+    .next-icon a {
+        width: 30px;
+        height: 30px;
     }
 
     /*About Us*/
     .about-con{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
     .left-about-con{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
     .l-about img{
-        margin: 0;
-        padding: 0;
-        width: 100%;
+        margin: 1rem auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
     .r-about img{
         margin-left: 0;
-        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
     .right-about-con{
         margin-left: 0;
-    }
-    .right-about h2{
-        font-size: 1.5rem;
+        grid-row: 1;
     }
     .titles{
-        font-size: 1rem;
+        text-align: center;
+    }
+    .right-about-con h2{
+        font-size: 2.5rem;
+        text-align: center;
     }
     .first{
-        margin: 0;
+        padding: 0;
+        margin: 2rem;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .sentence{
         padding: 0;
     }
-    /*News-Destination*/
+
+    /*News*/
     .news-destination{
         padding: 0;
+    }
+    .news-destination h3{
+        font-size: 2.5rem;
     }
     .sentence{
         font-size: 1rem;
     }
-    .news-destination h3{
-        font-size: 1rem;
-    }
     .news-info{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .warp{
-        margin: 0;
+        grid-template-columns: 1fr;
     }
     .card{
-        float: none;
-    }
-    .card img{
         width: 100%;
     }
-    .card button{
-        margin-left: 0;
+    .card-sentence{
+        text-align: justify;
     }
-    .containers{
-        margin: 0;
+    .card button{
+        margin-left: 2rem;
     }
 
     /*Download*/
     .download-content{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .left-download{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .left-download-icon-con{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
     .left-download-content{
         margin: 0;
     }
+    .left-download-content h4{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .left-sentence{
+        font-size: 1rem;
+        margin: 2rem;
+        text-align: justify;
+    }
+    .left-download{
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+    }
+    .left-download-icon-con{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    .left-download-icon{
+        display: flex;
+        flex-direction: column;
+    }
     .right-download{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .r-left-dl img{
+        margin: 1rem auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
     }
     .r-right-dl img{
-        margin-top: 0;
-        margin-right: 0; 
+        margin-right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     /*Contact*/
     .contact-info{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
     .left-contact{
-        margin: 0;
+        margin: 2rem;
     }
     .contact-links{
-        width: 0;
         margin: 0;
     }
     .links{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        margin: 0 3rem;
     }
     .left-links{
-        margin: 0;
+        margin: 1rem 2rem;
+    }
+    .left-links a{
+        line-height: 2rem;
     }
     .right-links{
-        margin: 0;
+        margin: 1rem 2rem;
+    }
+    .right-links a{
+        line-height: 2rem;
     }
 }
