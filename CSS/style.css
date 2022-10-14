@@ -1,0 +1,677 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-primary: #ebecf0;
+    --color-secondary: #09ace1;
+    --color-tertiary: #a09fa3;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-gray1: #464646;
+    --color-gray2: #f4f7fc;
+}
+
+.loader{
+    top: 0;
+    left: 0;
+    background-color: var(--color-black);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear{
+    animation: vanish 1s forwards;
+}
+@keyframes vanish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*Navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 4rem;
+}
+
+.brand-title{
+    margin-right: 50px;
+}
+.logo{
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    left: 2rem;
+    top: 0;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: 1rem;
+    display: block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: 10px;
+}
+/* Using media Queries */ 
+@media screen and (max-width: 600px) { 
+    .toggle-button {
+        display: flex;
+    }
+    
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+}
+/* Style The Dropdown Button */
+.drp-btn{
+    background-color: var(--color-primary);
+    cursor: pointer;
+    border-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.drp-btn a{
+    color: var(--color-black);
+    font-size: 1rem;
+    text-decoration: none;
+}
+.drp-btn::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    height: 3px;
+    transform: translateY(4px);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.drp-btn:hover::before{
+    transform: translateY(0);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: inherit;
+    display: inline-block;
+    margin-top: .3rem;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: center;
+    right: 31rem;
+    flex-direction: column;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.btn{
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--color-secondary);
+    padding: .5rem 1rem;
+    color: var(--color-white);
+}
+.booking-txt{
+    color: var(--color-white);
+}
+
+/*home-header*/
+.home-header img{
+    width: 100%;
+}
+
+.home-header h1{
+    color: var(--color-white);
+    position: relative;
+    bottom: 20rem;
+    margin-left: 6rem;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+.home-header p{
+    color: var(--color-white);
+    position: relative;
+    bottom: 19.3rem;
+    margin-left: 6rem;
+    line-height: 1.5rem;
+}
+
+.next-icon{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 26rem;
+    margin-left: 73rem;
+}
+.next-icon a{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.527);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all .4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/*About Us*/
+.about-con{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    padding: 0;
+    
+}
+.left-about-con{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.l-about img{
+    margin: 0 10rem;
+    padding: 0;
+    width: 65%;
+    height: 40%;
+    border-radius: 10px;
+}
+.r-about img{
+    width: 80%;
+    height: 82%;
+    border-radius: 10px;
+    margin-left: 4rem;
+}
+
+.right-about-con{
+    margin-left: 7rem;
+}
+.titles{
+    font-size: 1.5rem;
+    color: var(--color-gray1);
+    
+}
+.first{
+    font-weight: 400;
+    margin: 2rem 0;
+    line-height: 2rem;
+    padding-right: 6rem;
+    font-size: 1.3rem;
+    color: var(--color-tertiary);
+}
+.right-about-con h2{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    color: var(--color-gray1);
+}
+
+/*News*/
+.news-destination{
+    text-align: center;
+    padding: 2rem 20rem;
+}
+.news-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.news-destination h3{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.sentence{
+    font-size: 1.3rem;
+    color: var(--color-gray1);
+}
+.warp{
+    padding: 0;
+    margin: 1.5rem 1.5rem;
+}
+.card{
+    width: 99%;
+    background-color: var(--color-gray2);
+    font-size: 16px;
+    border-radius: 15px;
+    float: left;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.containers{
+    line-height: 2rem;
+    margin: 2rem;
+}
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card-sentence{
+    font-size: 1.2rem;
+    color: var(--color-gray1);
+    margin-top: 1.5rem;
+    font-weight: 500;
+}
+.card button{
+    margin-left: 3.5rem;
+    margin-top: 1.5rem;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray2);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    font-weight: 550;
+    cursor: pointer;
+}
+
+/*Download*/
+.download-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: initial;
+}
+.left-download-content{
+    margin: 4rem 8rem;
+}
+.left-download-content h4{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+.left-sentence{
+    font-weight: 400;
+    margin: .5rem 0;
+    font-size: 1.3rem;
+    color: var(--color-tertiary);
+}
+.left-download{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.left-download-icon-con{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.left-download-icon img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.right-download-icon img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.right-download{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 3rem 0;
+}
+.r-left-dl img{
+    margin: .5rem 0;
+}
+.r-right-dl img{
+    margin-top: .5rem;
+    margin-right: 10.5rem;
+}
+
+/*Contacts*/
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+}
+.logo2 img{
+    position: relative;
+    right: .5rem;
+}
+.left-contact{
+    margin: 4rem;
+}
+.contact-item{
+    display: flex;
+    align-items: center;
+    
+}
+.contact-item p{
+    margin: .3rem 0;
+    padding: 0;
+}
+.icon{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+.icon i{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--color-white);
+}
+.contact-item p{
+    color: var(--color-white);
+    font-weight: 100;
+}
+.contact-icon{
+    display: flex;
+    margin-top: 2rem;
+}
+.contact-icon a{
+    display: flex;
+    align-items: center;
+    background-color: var(--color-gray5);
+    cursor: pointer;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 .4rem;
+    transition: all .4s ease-in-out;
+}
+.contact-icon a:hover {
+    background-color: var(--color-secondary);
+}
+.contact-icon a:hover i{
+    color: var(--color-gray6);
+}
+.contact-links{
+    margin: 0 auto;
+    width: 60%;
+}
+.links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.left-links{
+    margin: 7.5rem 0;
+}
+.left-links a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-white);
+    line-height: 2.5rem;
+    font-weight: 100;
+}
+.left-links span{
+    font-weight: 500;
+}
+.right-links{
+    margin: 7.5rem 0;
+}
+.right-links a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-white);
+    line-height: 2.5rem;
+    font-weight: 100;
+}
+.right-links span{
+    font-weight: 500;
+}
+
+@media (min-width: 360px) and (max-width: 500px){
+    /*Navbar*/
+    .logo{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0;
+    }
+    .navbar-links li a{
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .toggle-button{
+        display: flex;
+        display: flex;
+    position: absolute;
+    right: 8.5rem;
+    top: 0.3rem;
+    }
+    .brand-title{
+        margin-right: 0;
+    }
+    /*Home*/
+    .home-header img{
+        width: 100%;
+    }
+    .home-header h1{
+        font-size: 1rem;
+        bottom: 0;
+        color: var(--color-black);
+        margin-left: 0;
+    }
+    .home-header p{
+        color: var(--color-black);
+        font-size: 1rem;
+        bottom: 0;
+        margin-left: 0;
+    }
+    .next-icon{
+        bottom: 0;
+        margin-left: 0;
+    }
+
+    /*About Us*/
+    .about-con{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-about-con{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .l-about img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .r-about img{
+        margin-left: 0;
+        width: 100%;
+    }
+    .right-about-con{
+        margin-left: 0;
+    }
+    .right-about h2{
+        font-size: 1.5rem;
+    }
+    .titles{
+        font-size: 1rem;
+    }
+    .first{
+        margin: 0;
+        padding: 0;
+    }
+    /*News-Destination*/
+    .news-destination{
+        padding: 0;
+    }
+    .sentence{
+        font-size: 1rem;
+    }
+    .news-destination h3{
+        font-size: 1rem;
+    }
+    .news-info{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .warp{
+        margin: 0;
+    }
+    .card{
+        float: none;
+    }
+    .card img{
+        width: 100%;
+    }
+    .card button{
+        margin-left: 0;
+    }
+    .containers{
+        margin: 0;
+    }
+
+    /*Download*/
+    .download-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-download{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-download-icon-con{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-download-content{
+        margin: 0;
+    }
+    .right-download{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .r-right-dl img{
+        margin-top: 0;
+        margin-right: 0; 
+    }
+
+    /*Contact*/
+    .contact-info{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-contact{
+        margin: 0;
+    }
+    .contact-links{
+        width: 0;
+        margin: 0;
+    }
+    .links{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .left-links{
+        margin: 0;
+    }
+    .right-links{
+        margin: 0;
+    }
+}
