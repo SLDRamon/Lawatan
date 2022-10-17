@@ -862,7 +862,7 @@ html, body{
         font-size: 3rem;
     }
     .l-about img{
-        margin: 1rem 9rem;
+        margin: .9rem 9rem;
     }
     .r-about img{
         margin-left: 3rem;
@@ -911,6 +911,9 @@ html, body{
         margin: 6rem;
     }.left-contact{
         margin: 4rem;
+    }
+    .r-left-dl img{
+        margin: .8rem 0;
     }
         
     
