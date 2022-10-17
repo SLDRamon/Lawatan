@@ -520,7 +520,7 @@ html, body{
     font-weight: 500;
 }
 
-@media (min-width: 360px) and (max-width: 500px){
+@media screen and (min-width: 600px){
     /*Navbar*/
     .navbar{
         padding: 0;
@@ -544,13 +544,12 @@ html, body{
         display: none;
     }
     .btn{
-       
-        background-color: var(--color-primary) !important;
+       background-color: var(--color-primary) !important;
     }
     .booking-txt{
         color: var(--color-black);
     }
-    
+
     /*Home*/
     .home-header h1{
         bottom: 6rem;
