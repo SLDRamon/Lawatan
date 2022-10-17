@@ -764,10 +764,10 @@ html, body{
         grid-template-columns: repeat(2, 1fr);
     }
     .l-about img{
-        margin: 1rem 2rem
+        margin: 0.9rem 2rem;
     }
     .r-about img{
-        margin: 1rem 0rem
+        margin: 1rem 0;
     }
     .right-about-con{
         grid-row: unset;
@@ -798,6 +798,9 @@ html, body{
     }
     .left-sentence{
         margin: .5rem;
+    }
+    .left-download-content h4{
+        font-size: 2rem;
     }
     .right-download{
         display: grid;
@@ -865,8 +868,9 @@ html, body{
         margin-left: 3rem;
     }
     .first{
-        padding-right: 6rem;
+        padding: 0 6rem;
         font-size: 1.3rem;
+        text-align: unset;
     }
     /*News*/
     .news-destination{
@@ -901,11 +905,13 @@ html, body{
         margin-right: 10.5rem;
     
     }
-    .left-contact{
-        margin: 4rem;
-    }
+
     /*Contact*/
     .links{
         margin: 6rem;
+    }.left-contact{
+        margin: 4rem;
     }
+        
+    
 }
