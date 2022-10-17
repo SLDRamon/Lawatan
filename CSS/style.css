@@ -717,7 +717,7 @@ html, body{
 @media screen and (min-width: 768px) {
     /*Navbar*/
     .navbar{
-        padding: 1rem;
+        padding: 1rem .5rem;
     }
     .navbar-links li a{
         font-size: .8rem;
